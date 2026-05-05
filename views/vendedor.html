@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel vendedor</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+
+<!-- 🔵 NAVBAR -->
+<header class="topbar">
+
+    <div class="topbar-left">
+        <img src="/images/logo.png" class="logo">
+        <span class="brand">UnisabanaMarket</span>
+    </div>
+
+    <div class="topbar-center">
+        <input type="text" placeholder="¿Qué buscas?...">
+    </div>
+
+    <div class="topbar-right">
+        <a href="/" class="link">Inicio</a>
+        <a href="/mihistorial" class="link">Mi historial</a>
+        <span>Vendedor</span>
+        <img src="/images/icon-cart.png" class="icon">
+    </div>
+
+</header>
+
+<!-- 🧱 CONTENEDOR PRINCIPAL -->
+<main class="container">
+
+    <!-- HEADER DE SECCIÓN -->
+    <div class="vendor-header">
+        <h2>Mis productos:</h2>
+
+        <button class="btn-add">
+            Agregar producto +
+        </button>
+    </div>
+
+    <!-- GRID -->
+    <div class="vendor-grid" id="misProductos"></div>
+
+</main>
+
+<script src="/js/vendedor.js"></script>
+</body>
+</html>

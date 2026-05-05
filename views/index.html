@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UnisabanaMarket</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+
+<!-- 🔵 NAVBAR -->
+<header class="topbar">
+
+    <div class="topbar-left">
+        <img src="/images/logo.png" class="logo">
+        <span class="brand">UnisabanaMarket</span>
+    </div>
+
+    <div class="topbar-center">
+        <input type="text" placeholder="Busca el producto que deseas...">
+    </div>
+
+    <div class="topbar-right">
+        <span>Log in</span>
+        <span>Sign in</span>
+        <a href="/vendedor" class="link">Vendedor</a>
+        <a href="/mihistorial">Mi historial</a>
+        <span>Vendedor</span>
+
+        <img src="/images/icon-bell.png" class="icon">
+        <img src="/images/icon-cart.png" class="icon">
+    </div>
+
+</header>
+
+<!-- 🟣 HERO SLIDER -->
+<section class="hero">
+
+    <div class="hero-slider">
+
+        <button class="slider-btn left" onclick="prevSlide()">‹</button>
+
+        <div class="slides" id="slides">
+            <img src="/images/placeholder.png" class="slide active">
+            <img src="/images/placeholder.png" class="slide">
+            <img src="/images/placeholder.png" class="slide">
+            <img src="/images/placeholder.png" class="slide">
+            <img src="/images/placeholder.png" class="slide">
+        </div>
+
+        <button class="slider-btn right" onclick="nextSlide()">›</button>
+
+        <div class="dots" id="dots"></div>
+
+    </div>
+
+</section>
+
+<!-- 🧩 PRODUCTOS SOBRE HERO -->
+<section class="floating-products">
+    <div class="grid" id="productos"></div>
+</section>
+
+<!-- 🏷️ CATEGORÍAS -->
+<section class="section">
+    <h2>Categorías</h2>
+    <div class="categorias">
+        <div class="categoria">Comida</div>
+        <div class="categoria">Moda</div>
+        <div class="categoria">Tecnología</div>
+    </div>
+</section>
+
+<!-- 🧱 MÁS PRODUCTOS -->
+<section class="section">
+    <h2>Más productos</h2>
+    <div class="grid" id="productos2"></div>
+</section>
+
+<script src="/js/main.js"></script>
+</body>
+</html>

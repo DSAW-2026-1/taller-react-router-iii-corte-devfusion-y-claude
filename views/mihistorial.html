@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi historial</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+
+<header class="topbar">
+
+    <div class="topbar-left">
+        <img src="/images/logo.png" class="logo">
+        <span class="brand">UnisabanaMarket</span>
+    </div>
+
+    <div class="topbar-center">
+        <input type="text" placeholder="Busca en tu historial...">
+    </div>
+
+    <div class="topbar-right">
+        <a href="/" class="link">Inicio</a>
+        <span>Mi historial</span>
+        <span>Vendedor</span>
+    </div>
+
+</header>
+
+<main>
+
+    <!-- COMPRADOS -->
+    <section class="section">
+
+        <h2>Productos que compré:</h2>
+
+        <div class="hist-wrapper">
+
+            <button class="hist-arrow left">‹</button>
+
+            <div class="hist-viewport">
+                <div class="hist-track" id="comprados"></div>
+            </div>
+
+            <button class="hist-arrow right">›</button>
+
+        </div>
+
+    </section>
+
+    <!-- INTERESADOS -->
+    <section class="section">
+
+        <h2>Productos que me interesaron:</h2>
+
+        <div class="hist-viewport">
+            <div class="hist-track" id="interesados"></div>
+        </div>
+
+    </section>
+
+</main>
+
+<script src="/js/mihistorial.js"></script>
+</body>
+</html>

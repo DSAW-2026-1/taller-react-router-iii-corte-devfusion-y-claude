@@ -1,0 +1,448 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f5f5;
+}
+
+/* 🔵 NAVBAR STICKY */
+.topbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    background: linear-gradient(90deg, #2a00ff, #4c00ff);
+    color: white;
+}
+
+.topbar-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo {
+    width: 40px;
+}
+
+.brand {
+    font-weight: bold;
+}
+
+.topbar-center input {
+    width: 400px;
+    padding: 10px;
+    border-radius: 20px;
+    border: none;
+}
+
+.topbar-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 14px;
+}
+
+.icon {
+    width: 22px;
+    cursor: pointer;
+}
+
+/* 🟣 HERO */
+.hero-slider {
+    position: relative;
+    height: 350px;
+    overflow: hidden;
+}
+
+.slides {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+.slide.active {
+    opacity: 1;
+}
+
+/* BOTONES */
+.slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255,255,255,0.3);
+    border: none;
+    font-size: 28px;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.left { left: 10px; }
+.right { right: 10px; }
+
+/* DOTS */
+.dots {
+    position: absolute;
+    bottom: 15px;
+    width: 100%;
+    text-align: center;
+}
+
+.dots span {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background: white;
+    margin: 5px;
+    border-radius: 50%;
+    opacity: 0.4;
+    cursor: pointer;
+}
+
+.dots span.active {
+    opacity: 1;
+}
+
+/* 🧩 PRODUCTOS ENCIMA */
+.floating-products {
+    width: 90%;
+    max-width: 1200px;
+    margin: -80px auto 40px auto;
+    position: relative;
+    z-index: 2;
+}
+
+/* GRID */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+/* CARD */
+.card {
+    background: white;
+    border-radius: 15px;
+    padding: 15px;
+    box-shadow: 0px 8px 20px rgba(0,0,0,0.1);
+    transition: 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+/* SECCIONES */
+.section {
+    width: 90%;
+    max-width: 1200px;
+    margin: 40px auto;
+}
+
+.section h2 {
+    margin-bottom: 20px;
+}
+
+/* CATEGORÍAS */
+.categorias {
+    display: flex;
+    gap: 20px;
+}
+
+.categoria {
+    flex: 1;
+    background: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0px 5px 10px rgba(0,0,0,0.1);
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.categoria:hover {
+    transform: translateY(-5px);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+
+    .topbar {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .topbar-center input {
+        width: 100%;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .categorias {
+        flex-direction: column;
+    }
+}
+
+/* ========================= */
+/* 🔥 HISTORIAL BIEN HECHO */
+/* ========================= */
+
+/* ENVUELVE TODO */
+.hist-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+/* 🔒 LIMITA EL ANCHO VISUAL */
+.hist-viewport {
+    width: 100%;
+    overflow: hidden; /* CLAVE */
+}
+
+/* TRACK */
+.hist-track {
+    display: flex;
+    gap: 20px;
+    padding: 10px 0;
+    transition: 0.3s;
+}
+
+/* 🧱 CARDS CONTROLADAS */
+.hist-card {
+    width: 200px; /* 🔥 en vez de min-width */
+    flex-shrink: 0;
+
+    background: white;
+    border-radius: 12px;
+    padding: 10px;
+    box-shadow: 0px 5px 10px rgba(0,0,0,0.1);
+}
+
+.hist-card img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+/* 🎯 FLECHAS */
+.hist-arrow {
+    position: absolute;
+    top: 40%;
+    transform: translateY(-50%);
+    z-index: 10;
+
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    border: none;
+    background: rgba(0,0,0,0.1);
+    cursor: pointer;
+}
+
+.hist-arrow.left {
+    left: -10px;
+}
+
+.hist-arrow.right {
+    right: -10px;
+}
+
+/* 📱 RESPONSIVE */
+@media (max-width: 768px) {
+
+    .hist-arrow {
+        display: none;
+    }
+
+    .hist-card {
+        width: 150px;
+    }
+}
+
+
+
+/* ========================= */
+/* 🧱 CONTENEDOR GLOBAL */
+/* ========================= */
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 30px auto;
+}
+
+/* ========================= */
+/* 🧑‍💼 VENDEDOR */
+/* ========================= */
+
+.vendor-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.btn-add {
+    background: #2a00ff;
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* GRID */
+.vendor-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+/* CARD */
+.vendor-card {
+    background: white;
+    border-radius: 15px;
+    padding: 15px;
+    box-shadow: 0px 6px 15px rgba(0,0,0,0.1);
+    transition: 0.2s;
+}
+
+.vendor-card:hover {
+    transform: translateY(-5px);
+}
+
+.vendor-card img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.vendor-info {
+    font-size: 14px;
+}
+
+.vendor-edit {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10px;
+}
+
+.vendor-edit button {
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* 📱 RESPONSIVE */
+@media (max-width: 768px) {
+
+    .vendor-header {
+        flex-direction: column;
+        gap: 15px;
+        align-items: flex-start;
+    }
+
+    .vendor-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+/* ========================= */
+/* 🛒 PRODUCTO */
+/* ========================= */
+
+.product-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    background: #f5f5f5;
+    padding: 30px;
+    border-radius: 15px;
+}
+
+.product-image img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.product-info h2 {
+    margin-bottom: 10px;
+}
+
+.product-actions {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.btn-primary {
+    background: #1a1aff;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.btn-secondary {
+    background: #000066;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+/* 📱 RESPONSIVE */
+@media (max-width: 768px) {
+    .product-container {
+        grid-template-columns: 1fr;
+    }
+}

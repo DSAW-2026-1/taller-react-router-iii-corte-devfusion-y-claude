@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Producto</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+
+<header class="topbar">
+
+    <div class="topbar-left">
+        <img src="/images/logo.png" class="logo">
+        <span class="brand">UnisabanaMarket</span>
+    </div>
+
+    <div class="topbar-center">
+        <input type="text" placeholder="¿Qué buscas?...">
+    </div>
+
+    <div class="topbar-right">
+        <a href="/" class="link">Inicio</a>
+        <a href="/mihistorial" class="link">Mi historial</a>
+        <a href="/vendedor" class="link">Vendedor</a>
+    </div>
+
+</header>
+
+<main class="container">
+
+    <div class="product-container">
+
+        <!-- IMAGEN -->
+        <div class="product-image">
+            <img id="imgProducto" src="/images/placeholder.png">
+        </div>
+
+        <!-- INFO -->
+        <div class="product-info">
+
+            <h2 id="titulo"></h2>
+            <p id="precio"></p>
+
+            <h4>Descripción y especificaciones:</h4>
+            <p id="descripcion"></p>
+
+            <div class="product-actions">
+                <button class="btn-primary">Agregar al carrito</button>
+                <button class="btn-secondary">Enviar mensaje</button>
+            </div>
+
+        </div>
+
+    </div>
+
+</main>
+
+<script src="/js/producto.js"></script>
+</body>
+</html>
